@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Media - YACA</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="./Resources/YACA logo.png" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./Resources/YACA logo.png" alt="YACA Logo" />
+        <span>YACA</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="media.html" class="active">Media</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Media Section -->
+  <section class="media">
+    <div class="container">
+      <h2>Media</h2>
+      <p style="text-align: center; max-width: 800px; margin: auto; margin-bottom: 2rem; color: #003366;">
+        Explore our photo galleries, watch videos from YACA events, and read our latest press releases.
+      </p>
+
+<h3>Photo Gallery</h3>
+<div class="gallery-grid">
+  <img src="./Resources/Images/4.jpg" alt="YACA Event 1" onclick="openLightbox(this)" />
+  <img src="./Resources/Images/5.jpg" alt="YACA Event 2" onclick="openLightbox(this)" />
+  <img src="./Resources/Images/6.jpg" alt="YACA Training" onclick="openLightbox(this)" />
+  <img src="./Resources/Images/7.jpg" alt="Aviation Bootcamp" onclick="openLightbox(this)" />
+  <img src="./Resources/Images/9.jpg" alt="Flight Simulator" onclick="openLightbox(this)" />
+  <img src="./Resources/Images/10.jpg" alt="Mentorship Session" onclick="openLightbox(this)" />
+</div>
+
+<!-- Lightbox Overlay -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Full Size" />
+</div>
+
+
+<h3>Videos</h3>
+<div class="video-grid">
+  <div class="video-wrapper">
+    <iframe src="./Resources/Videos/YACA1.mp4" title="YACA Event Highlights" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+      <!-- Press Releases -->
+      <h3>Press Releases</h3>
+      <ul class="press-list">
+        <li><a href="media/press-release-2025-01.pdf" target="_blank" rel="noopener">YACA Launches New Mentorship Program - Jan 2025</a></li>
+        <li><a href="media/press-release-2024-11.pdf" target="_blank" rel="noopener">YACA Hosts Aviation Bootcamp in Nairobi - Nov 2024</a></li>
+        <li><a href="media/press-release-2024-07.pdf" target="_blank" rel="noopener">YACA Partners with Local Schools for Outreach - Jul 2024</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-columns">
+      <div>
+        <img src="./Resources/YACA logo.png" alt="YACA Logo" class="footer-logo" />
+        <p>&copy; 2025 Young Aviators Club of Africa</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <p>Email: info@yaca.org</p>
+        <p>Phone: +254 710 216 665</p>
+        <p>Location: Nairobi, Kenya</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  function openLightbox(img) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightbox.style.display = 'flex';
+    lightboxImg.src = img.src;
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
